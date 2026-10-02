@@ -1,4 +1,5 @@
 // dfs using adjacency list
+// Time Complexity: O(V+E) where V is the number of vertices and E is the number of edges in the graph.
 
 #include <bits/stdc++.h>
 using namespace std;
