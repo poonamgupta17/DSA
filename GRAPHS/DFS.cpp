@@ -22,10 +22,11 @@ class Solution {
         int n=mp.size();
         unordered_map<int,vector<int>>adj;
         for(int u=0;u<n;u++){
-            for(auto v=mp[u].begin();v!=mp[u].end();v++){
-                adj[u].push_back(*v);
+            for(auto v=mp[u].begin();v!=mp[u].end();v++){ //v is an iterator; something that points to an element inside a container. For example, if: mp[u] = {2, 5, 7}; initially v points to 2.
+                adj[u].push_back(*v); //* is called the dereference operator; It means: "Give me the value that v is pointing to."
             }
         }
+        //v= iterator/pointer to the element ; *v=actual element/value.
         vector<int>result;
         vector<bool>visited(n,false);
         dfs(adj,0,visited,result);
