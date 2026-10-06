@@ -13,7 +13,7 @@ class Solution {
                 return true;
             }
         }
-        inRecursion[u]=false;
+        inRecursion[u]=false; //I am done exploring node u, so remove u from the current recursion path.
         return false;
     }
     bool isCyclic(int V, vector<vector<int>> &edges) {
