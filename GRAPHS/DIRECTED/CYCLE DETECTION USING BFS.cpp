@@ -38,7 +38,7 @@ class Solution {
                 if(indegree[v]==0)q.push(v);
             }
         }
-        if(count==V)return false;
+        if(count==V)return false; //we visited all states, hence no cycle so return false
         return true;
 
     }
