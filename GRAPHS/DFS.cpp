@@ -17,7 +17,15 @@ class Solution {
             }
         }
     }
-    vector<int> dfs(vector<vector<int>>& mp) {
+    vector<int> dfs(vector<vector<int>>& mp) { 
+        //(0 ->1 ,0-> 2 , 1 -> 3)
+        //here, meaning of mp: mp[0]={1,2} means vertex 0 has edges to vertex 1 and vertex 2. mp[1]={3} means vertex 1 has an edge to vertex 3. mp[2]={} means vertex 2 has no edges. mp[3]={} means vertex 3 has no edges.
+        // vector<vector<int>> mp = {
+        // {1, 2},  // Neighbors of vertex 0
+        // {3},     // Neighbors of vertex 1
+        // {},      // Neighbors of vertex 2
+        // {}       // Neighbors of vertex 3
+
         // Code here
         int n=mp.size();
         unordered_map<int,vector<int>>adj;
