@@ -18,7 +18,7 @@ class Solution {
     bool isCycle(int V, vector<vector<int>>& edges) {
         // Code here
         //unordered_map<int,vector<int>>adj; //same as vector<vector<int>>& edges
-        vector<vector<int>> adj(V);
+        vector<vector<int>> adj(V); //contains V empty adjacency lists, one for each vertex from 0 to V-1, Otherwise,"vector<vector<int>> adj;" contains 0 vertices initially.
 
                 for (auto &edge : edges) {
                     int u = edge[0];
