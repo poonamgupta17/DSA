@@ -28,7 +28,8 @@ class Solution {
 
         // Code here
         int n=mp.size();
-        unordered_map<int,vector<int>>adj;
+        unordered_map<int,vector<int>>adj; //vector<vector<int>> adj(V) creates V empty adjacency lists.
+        //unordered_map<int,vector<int>> adj(V) sets the initial bucket count to V. It does NOT create V vertex entries.
         for(int u=0;u<n;u++){
             for(auto v=mp[u].begin();v!=mp[u].end();v++){ //v is an iterator; something that points to an element inside a container. For example, if: mp[u] = {2, 5, 7}; initially v points to 2.
                 adj[u].push_back(*v); //* is called the dereference operator; It means: "Give me the value that v is pointing to."
